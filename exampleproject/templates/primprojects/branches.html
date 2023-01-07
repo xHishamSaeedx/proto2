@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<main class="singleProject my-md">
+    <div class="container">
+      <div class="layout">
+        <div class="column column--1of3">
+          <h3 class="singleProject__subtitle">Subjects</h3>
+          {% for sm in sem.sem1 %}
+          <div class="singleProject__toolStack">
+            <span class="tag tag--pill tag--sub tag--lg">
+              <a href="{% url 'subjecti' sm.1 %}"><small>{{sm.0}}</small></a>
+            </span>    
+          </div>
+          {% endfor %}
+        </div>
+        <div class="column column--2of3">
+          <img class="singleProject__preview" src="{{projects2.featured_image.url}}" alt="portfolio thumbnail" />
+          <h2 class="singleProject__title">{{projects2.name}}</h2>
+          <button class="btn btn--sub btn--lg  my-md"><a href="{% url 'create-TT'%}">CREATE TIMETABLE</a></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+{% endblock %}

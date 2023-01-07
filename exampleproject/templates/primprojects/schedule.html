@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<main class="singleProject my-md">
+    <div class="container">
+      <div class="layout">
+        <div class="column column--1of3">
+          <h3 class="singleProject__subtitle"></h3>
+          {% for sm in sem.sem1 %}
+          <div class="singleProject__toolStack">
+            <span class="tag tag--pill tag--sub tag--lg">
+              <small>{{sm.0}} ({{sm.1}}/10 rating)</small>
+            </span>    
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+{% endblock %}
